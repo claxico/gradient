@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7n4-5N-cda">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--gradient-->
+        <scene sceneID="HxO-aN-GK5">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="JPD-Pe-RW7" customClass="GameViewController" customModule="gradient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOG-V6-KFn">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dz-6x-Pfo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="N3G-hi-ghW" appends="YES" id="KoN-Q2-TcC"/>
+                                </connections>
+                            </skView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzP-St-3Uz">
+                                <rect key="frame" x="0.0" y="660" width="1024" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="guH-Mu-T7S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moves: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n26-9v-0Qz">
+                                <rect key="frame" x="0.0" y="499" width="390" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="m7p-VS-Oh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yF8-E5-nUM"/>
+                        <color key="backgroundColor" name="My Background Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yF8-E5-nUM" firstAttribute="trailing" secondItem="yzP-St-3Uz" secondAttribute="trailing" id="Cee-ch-oYA"/>
+                            <constraint firstItem="yF8-E5-nUM" firstAttribute="trailing" secondItem="n26-9v-0Qz" secondAttribute="trailing" id="IAF-Q5-BRH"/>
+                            <constraint firstItem="yzP-St-3Uz" firstAttribute="leading" secondItem="yF8-E5-nUM" secondAttribute="leading" id="OO1-3L-wcE"/>
+                            <constraint firstAttribute="bottom" secondItem="6dz-6x-Pfo" secondAttribute="bottom" id="Zjj-fG-NCX"/>
+                            <constraint firstItem="n26-9v-0Qz" firstAttribute="leading" secondItem="yF8-E5-nUM" secondAttribute="leading" id="f5X-i7-pD4"/>
+                            <constraint firstItem="6dz-6x-Pfo" firstAttribute="trailing" secondItem="yF8-E5-nUM" secondAttribute="trailing" id="kev-Xo-0T0"/>
+                            <constraint firstItem="6dz-6x-Pfo" firstAttribute="leading" secondItem="yF8-E5-nUM" secondAttribute="leading" id="nYW-xf-Eqt"/>
+                            <constraint firstItem="6dz-6x-Pfo" firstAttribute="top" secondItem="cOG-V6-KFn" secondAttribute="top" id="pCf-GN-1FA"/>
+                            <constraint firstItem="yzP-St-3Uz" firstAttribute="centerY" secondItem="yF8-E5-nUM" secondAttribute="centerY" id="xpg-fd-30J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="n26-9v-0Qz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="gradient" id="DtV-MX-eKK">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="8C2-o6-Zpc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="oTm-SR-rm7">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="F5k-Mt-Azf" kind="unwind" unwindAction="unwindToHome:" id="OYv-Wq-xYK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.triangle.2.circlepath" catalog="system" id="ese-fx-OEx">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="newGameButtonPressed:" destination="JPD-Pe-RW7" id="thn-kw-LWc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="gameSceneView" destination="6dz-6x-Pfo" id="bGS-lh-fXB"/>
+                        <outlet property="movesLabel" destination="n26-9v-0Qz" id="FN4-oz-0b0"/>
+                        <outlet property="winlabel" destination="yzP-St-3Uz" id="djU-Z9-gFR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUZ-dt-dk4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="F5k-Mt-Azf" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="N3G-hi-ghW">
+                    <connections>
+                        <action selector="swipedRight:" destination="JPD-Pe-RW7" id="KmA-J5-u3h"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="946.87499999999989" y="-356.2225475841874"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zzf-ET-5l6">
+            <objects>
+                <viewController id="Mq7-gZ-2ZE" customClass="ViewController" customModule="gradient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buc-ds-wUc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gradient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ2-My-CwE">
+                                <rect key="frame" x="0.0" y="67" width="1024" height="74"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemFillColor"/>
+                                <size key="shadowOffset" width="4" height="4"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-kL-9c6">
+                                <rect key="frame" x="370" y="1225" width="284" height="60"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minimumValue="3" maximumValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="lVu-at-HPC">
+                                        <rect key="frame" x="0.0" y="14" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="stepperValueChanged:" destination="Mq7-gZ-2ZE" eventType="valueChanged" id="gGZ-D1-uDA"/>
+                                        </connections>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7re-dn-Lbg">
+                                        <rect key="frame" x="112" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7re-dn-Lbg" secondAttribute="height" multiplier="1:1" id="GHh-4j-tq9"/>
+                                            <constraint firstAttribute="height" constant="60" id="sOk-tf-VOS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                            </backgroundConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24"/>
+                                            <color key="baseForegroundColor" name="My Background Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="JPD-Pe-RW7" kind="show" identifier="unwindToHome" id="sje-f0-Y8K"/>
+                                        </connections>
+                                    </button>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="4" id="1MZ-bU-QtK">
+                                        <rect key="frame" x="190" y="14" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stepperValueChanged:" destination="Mq7-gZ-2ZE" eventType="valueChanged" id="Q43-86-G8v"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nCK-MV-Cws"/>
+                                </constraints>
+                            </stackView>
+                            <skView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSd-I8-87A">
+                                <rect key="frame" x="20" y="191" width="984" height="984"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uSd-I8-87A" secondAttribute="height" multiplier="1:1" id="cw2-yY-COa"/>
+                                </constraints>
+                            </skView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EGG-KI-FeX"/>
+                        <color key="backgroundColor" name="My Background Color"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="zpV-kL-9c6" firstAttribute="top" secondItem="uSd-I8-87A" secondAttribute="bottom" constant="50" id="68M-CP-slH"/>
+                            <constraint firstItem="zpV-kL-9c6" firstAttribute="centerX" secondItem="buc-ds-wUc" secondAttribute="centerX" id="94y-Tj-DZZ"/>
+                            <constraint firstItem="uSd-I8-87A" firstAttribute="centerY" secondItem="buc-ds-wUc" secondAttribute="centerY" id="Ej9-9V-iyv"/>
+                            <constraint firstItem="EGG-KI-FeX" firstAttribute="trailing" secondItem="uSd-I8-87A" secondAttribute="trailing" constant="20" id="IFj-B3-kzX"/>
+                            <constraint firstItem="uSd-I8-87A" firstAttribute="centerX" secondItem="buc-ds-wUc" secondAttribute="centerX" id="PtB-7c-dFA"/>
+                            <constraint firstItem="uSd-I8-87A" firstAttribute="leading" secondItem="EGG-KI-FeX" secondAttribute="leading" constant="20" id="UL0-jI-Ike"/>
+                            <constraint firstItem="uSd-I8-87A" firstAttribute="top" secondItem="VQ2-My-CwE" secondAttribute="bottom" constant="50" id="b2V-PR-GPc"/>
+                            <constraint firstItem="VQ2-My-CwE" firstAttribute="leading" secondItem="EGG-KI-FeX" secondAttribute="leading" id="dtn-83-VIe"/>
+                            <constraint firstItem="EGG-KI-FeX" firstAttribute="trailing" secondItem="VQ2-My-CwE" secondAttribute="trailing" id="pjP-eR-Kz8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="56K-gh-ehm"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="difficultyStepper" destination="1MZ-bU-QtK" id="SSw-sf-BFd"/>
+                        <outlet property="gameSceneView" destination="uSd-I8-87A" id="vcK-qg-Pdt"/>
+                        <outlet property="gridSizeStepper" destination="lVu-at-HPC" id="eW2-FF-neS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATN-ta-Fh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="-356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ki7-HZ-a6k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7n4-5N-cda" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="line.3.horizontal" catalog="system" backIndicatorTransitionMaskImage="line.3.horizontal" id="ZKz-uJ-uD7">
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                            <color key="textShadowColor" systemColor="systemFillColor"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="2" vertical="2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mq7-gZ-2ZE" kind="relationship" relationship="rootViewController" id="0Wx-8q-bNC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVu-a4-9G9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="-346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.triangle.2.circlepath" catalog="system" width="128" height="104"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="My Background Color">
+            <color red="1" green="1" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
